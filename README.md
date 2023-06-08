@@ -6,7 +6,7 @@
 All data of HiSa & HiDa is hosted on Google Drive:
 
 | Path | Files | Format | Description
-| :--- | ----: | :----: | :----------
+| :---- | ----: | :----: | :----------
 | [HiSa_HiDa](https://drive.google.com/open?id=16_wS405x3sTCbIo2rPXr9q6Y_kuS6tk-) | 12,503 | | Main folder
 | &boxvr;&nbsp; [img](https://drive.google.com/open?id=1kXgdqZIfUwJ-dtwbqxiLgGOxDORrDoUa) | 1,250 | PNG | Hair-centric real images at 512&times;512
 | &boxvr;&nbsp; [seg](https://drive.google.com/open?id=1EH0TGU443m-BDH_6_8rQfOaAR6iNTWau) | 1,250 | PNG | Hair masks
