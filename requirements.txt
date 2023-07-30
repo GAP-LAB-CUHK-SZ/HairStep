@@ -1,0 +1,8 @@
+numpy
+imageio
+matplotlib
+scikit-image
+opencv-python
+tqdm
+
+git+https://github.com/facebookresearch/segment-anything.git
