@@ -38,8 +38,6 @@ def img2depth(opt):
 
     model.eval()
 
-    torch.save(model.state_dict(), './checkpoints/img2hairstep/img2depth.pth')
-
     for item in tqdm(items):
         rgb_img = imageio.imread(os.path.join(resized_path, item))[:,:, 0:3] / 255.
         mask = (imageio.imread(os.path.join(output_seg_path, item))/255.>0.5)
