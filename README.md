@@ -25,13 +25,31 @@ All data of HiSa & HiDa is hosted on Google Drive:
 
 The HiSa & HiDa dataset is available for non-commercial research purposes only. All real images are collected from the Internet. Please contact [Yujian Zheng](https://paulyzheng.github.io/about/) and [Xiaoguang Han](https://gaplab.cuhk.edu.cn/) for questions about the dataset.
 
-# SAM-Hair
+# Installation
+  ```
+git clone https://github.com/GAP-LAB-CUHK-SZ/HairStep.git
+cd HairStep
+
+conda create -n hairstep python=3.8
+conda activate hairstep
+
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip install -r requirements.txt
+  ```
+Code is tested on torch1.9.0, CUDA11.1, Ubuntu 20.04 LTS.
+
+# Convert Image to HairStep
+Put collected and cropped potrait images into ./results/real_imgs/img/.
+  ```
+  python -m scripts.img2hairstep
+  ```
 
 
 # TODO
 - [x] Share the HiSa & HiDa datasets
-- [ ] Release the code for computing metrics HairSale & HairRida
-- [ ] Opensource a fully-automatic system which maps a single RGB portrait to a 3D strand-level hair model
-- [ ] Release the code for traning and data pre-processing
+- [x] Release the code for converting images to HairStep
+- [ ] Release the code for reconstructing 3D strands from HairStep (before 2023.8.31)
+- [ ] Release the code for computing metrics HairSale & HairRida (before 2023.8.31)
+- [ ] Release the code for traning and data pre-processing (later)
 
 Note: A more compact and efficient sub-module for 3D hair reconstruction will be released, which has comparable performance to NeuralHDHair* reported in the paper.
