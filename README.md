@@ -39,7 +39,7 @@ pip install -r requirements.txt
 Code is tested on torch1.9.0, CUDA11.1, Ubuntu 20.04 LTS.
 
 # Convert Image to HairStep
-Put collected and cropped potrait images into ./results/real_imgs/img/.
+Put collected and cropped potrait images into ./results/real_imgs/img/. Download the checkpoint of [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and put it to ./checkpoints/SAM-models/.
   ```
   python -m scripts.img2hairstep
   ```
