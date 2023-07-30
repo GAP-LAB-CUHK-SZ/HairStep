@@ -2,7 +2,7 @@
 
 <p align="center"><img src="docs/teaser.jpg"/></p></br>
 
-# Dataset
+## Dataset
 All data of HiSa & HiDa is hosted on Google Drive:
 
 | Path | Files | Format | Description
@@ -25,7 +25,7 @@ All data of HiSa & HiDa is hosted on Google Drive:
 
 The HiSa & HiDa dataset is available for non-commercial research purposes only. All real images are collected from the Internet. Please contact [Yujian Zheng](https://paulyzheng.github.io/about/) and [Xiaoguang Han](https://gaplab.cuhk.edu.cn/) for questions about the dataset.
 
-# Installation
+## Installation
   ```
 git clone https://github.com/GAP-LAB-CUHK-SZ/HairStep.git
 cd HairStep
@@ -38,14 +38,14 @@ pip install -r requirements.txt
   ```
 Code is tested on torch1.9.0, CUDA11.1, Ubuntu 20.04 LTS.
 
-# Convert Image to HairStep
+## Convert Image to HairStep
 Put collected and cropped potrait images into ./results/real_imgs/img/. Download the checkpoint of [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and put it to ./checkpoints/SAM-models/.
   ```
   python -m scripts.img2hairstep
   ```
 Results will be saved in ./results/real_imgs/.
 
-# TODO
+## TODO
 - [x] Share the HiSa & HiDa datasets
 - [x] Release the code for converting images to HairStep
 - [ ] Release the code for reconstructing 3D strands from HairStep (before 2023.8.31)
