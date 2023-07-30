@@ -25,6 +25,9 @@ All data of HiSa & HiDa is hosted on Google Drive:
 
 The HiSa & HiDa dataset is available for non-commercial research purposes only. All real images are collected from the Internet. Please contact [Yujian Zheng](https://paulyzheng.github.io/about/) and [Xiaoguang Han](https://gaplab.cuhk.edu.cn/) for questions about the dataset.
 
+# SAM-Hair
+
+
 # TODO
 - [x] Share the HiSa & HiDa datasets
 - [ ] Release the code for computing metrics HairSale & HairRida
