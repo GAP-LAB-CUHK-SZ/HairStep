@@ -43,7 +43,7 @@ Put collected and cropped potrait images into ./results/real_imgs/img/.
   ```
   python -m scripts.img2hairstep
   ```
-
+Results will be saved in ./results/real_imgs/.
 
 # TODO
 - [x] Share the HiSa & HiDa datasets
