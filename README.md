@@ -27,7 +27,7 @@ The HiSa & HiDa dataset and pre-trained checkpoints based on it are available fo
 
 ## Installation
   ```
-git clone https://github.com/GAP-LAB-CUHK-SZ/HairStep.git
+git clone --recursive https://github.com/GAP-LAB-CUHK-SZ/HairStep.git
 
 cd HairStep
 
