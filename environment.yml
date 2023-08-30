@@ -1,0 +1,64 @@
+name: hairstep
+channels:
+  - bottler
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - iopath
+  - fvcore
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=4.5=1_gnu
+  - ca-certificates=2023.5.7=hbcca054_0
+  - certifi=2020.6.20=pyhd3eb1b0_3
+  - colorama=0.4.5=pyhd8ed1ab_0
+  - dataclasses=0.8=pyh787bdff_2
+  - embree=2.17.7=ha770c72_1
+  - freetype=2.10.4=h0708190_1
+  - fvcore=0.1.5.post20210915=py36
+  - ilmbase=2.5.5=h780b84a_0
+  - iopath=0.1.9=py36
+  - jpeg=9e=h7f8727e_0
+  - ld_impl_linux-64=2.35.1=h7274673_9
+  - libblas=3.9.0=11_linux64_openblas
+  - libcblas=3.9.0=11_linux64_openblas
+  - libffi=3.3=he6710b0_2
+  - libgcc-ng=9.3.0=h5101ec6_17
+  - libgfortran-ng=11.2.0=h69a702a_11
+  - libgfortran5=11.2.0=h5c6108e_11
+  - libgomp=9.3.0=h5101ec6_17
+  - liblapack=3.9.0=11_linux64_openblas
+  - libopenblas=0.3.17=pthreads_h8fe5266_1
+  - libpng=1.6.37=h21135ba_2
+  - libprotobuf=3.16.0=h780b84a_0
+  - libstdcxx-ng=9.3.0=hd4cf53a_17
+  - libtiff=4.0.10=hc3755c2_1005
+  - lz4-c=1.9.3=h9c3ff4c_1
+  - ncurses=6.3=h7f8727e_2
+  - numpy=1.19.5=py36hfc0c790_2
+  - nvidiacub=1.10.0=0
+  - olefile=0.46=pyh9f0ad1d_1
+  - onnx=1.10.1=py36hdc05e82_0
+  - openexr=2.5.5=hf817b99_0
+  - openexr-python=1.3.2=py36h25526e3_2
+  - openssl=1.1.1l=h7f8727e_0
+  - pip=21.2.2=py36h06a4308_0
+  - portalocker=1.4.0=py_0
+  - pyembree=0.1.6=py36h830a2c2_1
+  - python=3.6.13=h12debd9_1
+  - python_abi=3.6=2_cp36m
+  - readline=8.1=h27cfd23_0
+  - setuptools=58.0.4=py36h06a4308_0
+  - six=1.16.0=pyh6c4a22f_0
+  - sqlite=3.36.0=hc218d9a_0
+  - tabulate=0.8.10=pyhd8ed1ab_0
+  - termcolor=1.1.0=pyhd8ed1ab_3
+  - typing_extensions=4.1.1=pyha770c72_0
+  - wheel=0.37.0=pyhd3eb1b0_1
+  - xz=5.2.5=h7b6447c_0
+  - yacs=0.1.8=pyhd8ed1ab_0
+  - yaml=0.2.5=h516909a_0
+  - zlib=1.2.11=h7b6447c_3
+  - zstd=1.4.9=ha95c52a_0
+prefix: /home/anaconda3/envs/hairstep
+
