@@ -62,7 +62,7 @@ Results will be saved in ./results/real_imgs/.
 - [x] Share the HiSa & HiDa datasets
 - [x] Release the code for converting images to HairStep
 - [x] Release the code for reconstructing 3D strands from HairStep
-- [ ] Release the code for computing metrics HairSale & HairRida (soon)
+- [ ] Release the code for computing metrics HairSale & HairRida (within a few days)
 - [ ] Release the code for training and data pre-processing (later)
 
 **Note**: A more compact and efficient sub-module for 3D hair reconstruction has been released, which has comparable performance to NeuralHDHair* reported in the paper.
