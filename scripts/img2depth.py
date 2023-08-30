@@ -15,9 +15,9 @@ def depth2vis(mask, depth, path_output):
     masked_img = depth * mask + (1 - mask) * ((depth * mask - (1 - mask) * 100000).max())  # set the value of un-mask to the min-val in mask
     norm_masked_depth = masked_img / (np.nanmax(masked_img) - np.nanmin(masked_img))  # norm
 
-    plt.imsave('inter_saved_img.png', norm_masked_depth, cmap='jet')
+    plt.imsave('temp.png', norm_masked_depth, cmap='jet')
 
-    depth_map_vis = imageio.imread('inter_saved_img.png')[..., 0:3] * np.repeat(mask[:,:,None], 3, axis=2)
+    depth_map_vis = imageio.imread('temp.png')[..., 0:3] * np.repeat(mask[:,:,None], 3, axis=2)
     plt.imsave(path_output, depth_map_vis)
 
 def img2depth(opt):

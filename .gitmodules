@@ -1,0 +1,3 @@
+    [submodule "3DDFA_V2"]
+	path = external/3DDFA_V2
+	url = https://github.com/cleardusk/3DDFA_V2.git

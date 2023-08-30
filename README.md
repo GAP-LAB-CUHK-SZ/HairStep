@@ -23,7 +23,7 @@ All data of HiSa & HiDa is hosted on Google Drive:
 | &boxvr;&nbsp; [split_train.json](https://drive.google.com/open?id=1-9cZxp1KsJu9PUZpc4It6reihWxRrdV6) | 1 | JSON | Split file for training
 | &boxur;&nbsp; [split_test.json](https://drive.google.com/open?id=1-EVSNXbfXhaiAxGSDq1tmaNz_pdqaFdm) | 1 | JSON | Split file for testing
 
-The HiSa & HiDa dataset is available for non-commercial research purposes only. All real images are collected from the Internet. Please contact [Yujian Zheng](https://paulyzheng.github.io/about/) and [Xiaoguang Han](https://gaplab.cuhk.edu.cn/) for questions about the dataset.
+The HiSa & HiDa dataset and pre-trained checkpoints based on it are available for **non-commercial research purposes only**. All real images are collected from the Internet. Please contact [Yujian Zheng](https://paulyzheng.github.io/about/) and [Xiaoguang Han](https://gaplab.cuhk.edu.cn/) for questions about the dataset.
 
 ## Installation
   ```
@@ -31,29 +31,55 @@ git clone https://github.com/GAP-LAB-CUHK-SZ/HairStep.git
 
 cd HairStep
 
-conda create -n hairstep python=3.8
+conda env create -f environment.yml
 conda activate hairstep
 
 pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
-OR
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
 
 pip install -r requirements.txt
-  ```
-Code is tested on torch1.9.0/1.12.1, CUDA11.1/11.3, Ubuntu 20.04 LTS.
 
-## Convert Image to HairStep
-Put collected and cropped potrait images into ./results/real_imgs/img/. Download the checkpoint of [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and put it to ./checkpoints/SAM-models/.
+cd external/3DDFA_V2
+sh ./build.sh
+cd ../../
   ```
-  python -m scripts.img2hairstep
+Code is tested on torch1.9.0, CUDA11.1, Ubuntu 20.04 LTS.
+
+## Single-view 3D Hair Reconstruction
+Put collected and cropped potrait images into ./results/real_imgs/img/. 
+
+Download the checkpoint of [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and put it to ./checkpoints/SAM-models/. 
+
+Download checkpoints of [3D networks](https://drive.google.com/file/d/1-akuukaYYtJDta24AAqVdgUOGte4EmQf/view?usp=drive_link) and put them to ./checkpoints/recon3D/.
+  ```
+  CUDA_VISIBLE_DEVICES=0 python -m scripts.img2hairstep
+  CUDA_VISIBLE_DEVICES=0 python scripts/get_lmk.py
+  CUDA_VISIBLE_DEVICES=0 python -m scripts.opt_cam
+  CUDA_VISIBLE_DEVICES=0 python -m scripts.recon3D
   ```
 Results will be saved in ./results/real_imgs/.
 
 ## TODO
 - [x] Share the HiSa & HiDa datasets
 - [x] Release the code for converting images to HairStep
-- [ ] Release the code for reconstructing 3D strands from HairStep (before 2023.8.31)
-- [ ] Release the code for computing metrics HairSale & HairRida (before 2023.8.31)
-- [ ] Release the code for traning and data pre-processing (later)
+- [x] Release the code for reconstructing 3D strands from HairStep
+- [ ] Release the code for computing metrics HairSale & HairRida (soon)
+- [ ] Release the code for training and data pre-processing (later)
 
-Note: A more compact and efficient sub-module for 3D hair reconstruction will be released, which has comparable performance to NeuralHDHair* reported in the paper.
+Note: A more compact and efficient sub-module for 3D hair reconstruction has been released, which has comparable performance to NeuralHDHair* reported in the paper.
+
+The original hair matting approach is provided by Kuaishou Technology, which cannot be released. The substitute method based on SAM fails sometimes.
+
+## Citation
+Please cite our paper as below if you find this repository is helpful:
+```
+@inproceedings{zheng2023hairstep,
+  title={Hairstep: Transfer synthetic to real using strand and depth maps for single-view 3d hair modeling},
+  author={Zheng, Yujian and Jin, Zirong and Li, Moran and Huang, Haibin and Ma, Chongyang and Cui, Shuguang and Han, Xiaoguang},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={12726--12735},
+  year={2023}
+}
+```
+
+## Acknowledgements
+This repository is based on some excellent works, such as [HairNet](https://github.com/papagina/HairNet_DataSetGeneration), [PIFu](https://github.com/shunsukesaito/PIFu), [3DDFA_V2](https://github.com/cleardusk/3DDFA_V2), [SAM](https://github.com/facebookresearch/segment-anything) and [Depth-in-the-wild](https://github.com/yifjiang/relative-depth-using-pytorch). Many thanks.
