@@ -23,7 +23,7 @@ All data of HiSa & HiDa is hosted on Google Drive:
 | &boxvr;&nbsp; [split_train.json](https://drive.google.com/open?id=1-9cZxp1KsJu9PUZpc4It6reihWxRrdV6) | 1 | JSON | Split file for training
 | &boxur;&nbsp; [split_test.json](https://drive.google.com/open?id=1-EVSNXbfXhaiAxGSDq1tmaNz_pdqaFdm) | 1 | JSON | Split file for testing
 
-The HiSa & HiDa dataset and pre-trained checkpoints based on it are available for **non-commercial research purposes only**. All real images are collected from the Internet. Please contact [Yujian Zheng](https://paulyzheng.github.io/about/) and [Xiaoguang Han](https://gaplab.cuhk.edu.cn/) for questions about the dataset.
+**The HiSa & HiDa dataset and pre-trained checkpoints based on it are available for non-commercial research purposes only**. All real images are collected from the Internet. Please contact [Yujian Zheng](https://paulyzheng.github.io/about/) and [Xiaoguang Han](https://gaplab.cuhk.edu.cn/) for questions about the dataset.
 
 ## Installation
   ```
@@ -65,7 +65,7 @@ Results will be saved in ./results/real_imgs/.
 - [ ] Release the code for computing metrics HairSale & HairRida (soon)
 - [ ] Release the code for training and data pre-processing (later)
 
-Note: A more compact and efficient sub-module for 3D hair reconstruction has been released, which has comparable performance to NeuralHDHair* reported in the paper.
+**Note**: A more compact and efficient sub-module for 3D hair reconstruction has been released, which has comparable performance to NeuralHDHair* reported in the paper.
 
 The original hair matting approach is provided by Kuaishou Technology, which cannot be released. The substitute method based on SAM fails sometimes.
 
