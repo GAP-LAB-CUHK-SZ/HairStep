@@ -65,7 +65,7 @@ Results will be saved in ./results/real_imgs/.
 - [ ] Release the code for computing metrics HairSale & HairRida 
 - [ ] Release the code for training and data pre-processing
 
-(within a few days before the Chinese New Year of Dragon, sorry for the delay)
+(within a few days before the end of Feb., sorry for the delay)
 
 **Note**: A more compact and efficient sub-module for 3D hair reconstruction has been released, which has comparable performance to NeuralHDHair* reported in the paper.
 
